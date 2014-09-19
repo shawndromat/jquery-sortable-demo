@@ -12,9 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
 //= require underscore
 //= require backbone
-//= require jquery_ui
+//= require app
 //= require_tree ../templates
 //= require_tree ./models
 //= require_tree ./collections
