@@ -3,14 +3,12 @@ JqueryUi.Views.Index = Backbone.CompositeView.extend({
     this.listenTo(this.collection, "sync", this.render);
     this.listenTo(this.collection, "add", this.addList)
   },
-  events: {
-    "sortstart #lists-wrapper": "printSubviews"
-  },
   template: JST["index"],
   render: function () {
     var content = this.template({lists: this.collection});
     this.$el.html(content);
     this.attachSubviews();
+    // this.$(".lists").sortable();
     return this;
   },
   addList: function (list) {

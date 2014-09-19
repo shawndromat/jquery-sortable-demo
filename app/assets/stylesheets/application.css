@@ -24,7 +24,8 @@ body {
 }
 
 .list {
-  display: inline-block;
+  /*display: inline-block;*/
+  float: left;
   width: 260px;
   vertical-align: top;
   background-color: #ccc;
