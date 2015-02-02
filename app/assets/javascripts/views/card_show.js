@@ -9,5 +9,5 @@ JqueryUi.Views.CardView = Backbone.View.extend({
     var content = this.template({card: this.model});
     this.$el.html(content);
     return this;
-  }
+  },
 })

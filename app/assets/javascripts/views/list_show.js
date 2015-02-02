@@ -10,6 +10,10 @@ JqueryUi.Views.ListShow = Backbone.CompositeView.extend({
     this.listenTo(this.model.cards(), "add", this.addCard)
   },
 
+  events: {
+    "sortreceive .card-wrapper": "printReceiver"
+  },
+
   template: JST["list_show"],
 
   render: function () {
@@ -17,6 +21,13 @@ JqueryUi.Views.ListShow = Backbone.CompositeView.extend({
     this.$el.html(content);
     this.attachSubviews();
     return this;
+  },
+
+  onRender: function() {
+    Backbone.CompositeView.prototype.onRender.call(this);
+    this.$('.card-wrapper').sortable({
+      connectWith: '.card-wrapper'
+    });
   },
 
   addCard: function (card) {

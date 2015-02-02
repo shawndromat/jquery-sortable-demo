@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'jquery-ui-rails'
 gem 'backbone-on-rails'
 gem 'rails', '4.1.4'
 gem 'sqlite3'
