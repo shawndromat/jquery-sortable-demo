@@ -53,3 +53,7 @@ li {
 .placeholder {
   height: 50px;
 }
+
+.card-wrapper {
+  min-height: 5px;
+}

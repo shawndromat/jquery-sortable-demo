@@ -10,4 +10,7 @@ JqueryUi.Views.CardView = Backbone.View.extend({
     this.$el.html(content);
     return this;
   },
+  onRender: function() {
+    // console.log("helllllooooooo");
+  }
 })

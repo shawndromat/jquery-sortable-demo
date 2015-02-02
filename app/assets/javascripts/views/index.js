@@ -7,15 +7,15 @@ JqueryUi.Views.Index = Backbone.CompositeView.extend({
   template: JST["index"],
 
   events: {
-    "sortupdate #lists-wrapper": "printStart",
+    "sortstart #lists-wrapper": "printStart",
     "sortstop #lists-wrapper": "printStop"
   },
 
   render: function () {
     var content = this.template({lists: this.collection});
     this.$el.html(content);
+    this.$("#lists-wrapper").sortable();
     this.attachSubviews();
-    this.$('#lists-wrapper').sortable();
     this.onRender();
     return this;
   },
@@ -25,9 +25,9 @@ JqueryUi.Views.Index = Backbone.CompositeView.extend({
     this.addSubview("#lists-wrapper", listShow)
   },
   printStart: function (event) {
-    console.log("STARTTTTT");
+    // console.log("STARTTTTT");
   },
   printStop: function (event) {
-    console.log("STOPPPPPPPP");
+    // console.log("STOPPPPPPPP");
   },
 })
